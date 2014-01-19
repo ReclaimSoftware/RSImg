@@ -11,6 +11,7 @@ mkdir -p $BUILD
 
 echo 'Building...' && \
     $CC \
+        -std=c99 \
         -Wall \
         -O3 \
         $RSTEST_ARGS \

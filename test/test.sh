@@ -10,7 +10,7 @@ RSIMG_ARGS="-isystem $RSIMG/ $RSIMG/RSImg.c"
 mkdir -p $BUILD
 
 echo 'Building...' && \
-    gcc \
+    $CC \
         -Wall \
         -O3 \
         $RSTEST_ARGS \

@@ -6,10 +6,10 @@
 int RSImgFreadPPMP6Header(FILE *file, uint32_t *width, uint32_t *height, uint32_t *headerSize) {
 
     const int prefixSize = 3;
-    char prefix[prefixSize] = {'P', '6', '\n'};
+    char prefix[3] = {'P', '6', '\n'};
 
     const int suffixSize = 4;
-    char suffix[suffixSize] = {'2', '5', '5', '\n'};
+    char suffix[4] = {'2', '5', '5', '\n'};
 
     // "P6\n"
     char actualPrefix[prefixSize];

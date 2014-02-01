@@ -24,11 +24,11 @@ int RSImgFreadPPMP6Header(FILE *file, uint32_t *width, uint32_t *height, uint32_
     const int lineSize = 200;
     char line[lineSize];
     fgets(line, lineSize, file);
-    *headerSize = 3 + strlen(line) + 4;
+    *headerSize = 3 + (uint32_t)strlen(line) + 4;
     char *tok = strtok(line, " ");
-    *width = atol(tok);
+    *width = (uint32_t)atol(tok);
     tok = strtok(NULL, " ");
-    *height = atol(tok);
+    *height = (uint32_t)atol(tok);
 
     // "255\n"
     char actualSuffix[suffixSize];
